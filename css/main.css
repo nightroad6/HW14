@@ -296,10 +296,9 @@ button {
     height: 100%;
     display: block;
     margin: 0 auto;
-    max-width: 350px;
+    max-width: 290px;
     max-height: 200px;
 }
-
 .reasons {
     font-size: 0;
 }
@@ -346,22 +345,30 @@ button {
     -ms-flex-pack: center;
     justify-content: center;
 }
-
-.reasons .reason .square img {
-    width: 45px;
-    height: auto;
-    display: block;
+.reason-wrapper {
+    width: 40px;
     margin: 0 auto;
 }
-
-.reasons .reason .square img.width60 {
-    width: 60px;
+.bg-reason1 {
+    width: 55px;
+    height: 52px;
+    background: url(../img/css_sprites.png) -8px 6px;
 }
-
-.reasons .reason .square img.width35 {
-    width: 35px;
+.bg-reason2 {
+    width: 45px; 
+    height: 52px;
+    background: url(../img/css_sprites.png) -8px -52px;
 }
-
+.bg-reason3 {
+    width: 39px; 
+    height: 54px;
+    background: url(../img/css_sprites.png) -8px -377px;
+}
+.bg-reason4 {
+    width: 48px; 
+    height: 56px;
+    background: url(../img/css_sprites.png) -8px -233px;
+}
 .video {
     margin-top: 30px;
 }
@@ -531,13 +538,28 @@ button {
     margin-bottom: 50px;
     clear: both;
 }
-
+.adv {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.bg-adv1 {
+    width: 55px; height: 60px;
+    background: url(../img/css_sprites.png) -8px -448px;
+}
+.bg-adv2 {
+    width: 55px; height: 60px;
+    background: url(../img/css_sprites.png) -8px -524px;
+}
+.bg-adv3 {
+    width: 60px; height: 60px;
+    background: url(../img/css_sprites.png) -8px -305px;
+}
 .advantages .adv-title {
     margin-top: 15px;
     font-family: "HelveticaNeueBold";
     font-size: 18px;
 }
-
 .last-screen {
     clear: both;
     text-align: center;

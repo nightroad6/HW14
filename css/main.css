@@ -3,7 +3,7 @@ img {
     height: auto;
 }
 
-html, body, .wrapper {
+html, body, .main-wrapper {
     min-height: 100% !important;
     height: 100%;
 }
@@ -13,7 +13,7 @@ body {
     font-size: 14px;
     letter-spacing: 0.05em;
 }
-/* .preloader {
+.preloader {
     width: 100vw;
     height: 100%;
     background: #fff7c5;
@@ -74,13 +74,13 @@ body {
  }
 .loaded .preloader {
         display: none;
-} */
+}
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.wrapper {
+.main-wrapper {
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -496,19 +496,22 @@ button {
 .reviews-wrapper {
     position: relative;
     overflow: hidden;
+    
 }
 .review-slider {
     display: flex;
     transition: transform 0.6s ease;
+    height: 100%;
+	justify-content:center;
+    align-items: center;
 }
-.slide {
+.slider {
     flex: 0 0 100%;
     max-width: 100%;
 }
-.arrow {
+.slider .slick-arrow{
     position: absolute;
     top: 50%;
-    /* display: none; */
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -519,24 +522,22 @@ button {
     transform: translateY(-50%);
     background: rgba(0, 0, 0, .5);
 }
-.arrow:hover, .arrow:focus {
-    color: #fff;
-    text-decoration: none;
-    outline: 0;
-    opacity: .9;
-}
-.bg-arrow_left {
-    left: 0;
-    width: 23px; 
+.slick-arrow.slick-prev {
+    left: -35px;
+    width: 23px;
+    top: 100px; 
     height: 62px;
     background: url(../img/css_sprites.png) -8px -600px;
+    z-index: 10;
 }
-.bg-arrow_right {
-    right: 0;
+.slick-arrow.slick-next {
+    right: -35px;
+    top: 100px;
     width: 23px; 
     height: 62px;
     background: url(../img/css_sprites.png) -8px -678px;
 }
+
 .reviews .review-slider {
     width: 90%;
     max-width: 900px;
@@ -571,13 +572,17 @@ button {
 .reviews .review-author > * {
     vertical-align: top;
 }
-
-.reviews .review-author .ava {
+.bg-review1_ava {
+    margin-left: auto;
+    width: 45px; 
+    height: 45px;
+    background: url(../img/css_sprites.png) -8px -119px;
+} 
+.reviews .review-author {
     position: relative;
     top: -15px;
     margin-right: 10px;
 }
-
 .delivery .h2 {
     margin-bottom: 50px;
 }
@@ -654,7 +659,7 @@ button {
     text-align: center;
 }
 
-.last-screen .wrapper {
+.last-screen .main-wrapper {
     height: auto;
     min-height: 1px !important;
 }

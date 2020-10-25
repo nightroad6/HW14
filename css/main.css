@@ -438,7 +438,7 @@ button {
     margin-bottom: 50px;
 }
 
-.video #video {
+.video #video .video-frame {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
